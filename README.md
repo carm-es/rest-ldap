@@ -3,8 +3,11 @@
 Aplicación Web para la consulta de usuarios en OpenLDAP a través de un servicio REST. 
 
 http://SERVIDOR:PUERTO/ldap/rest/dac/usuarios.json/LOGIN_O_NIF
+
 http://SERVIDOR:PUERTO/ldap/rest/dac/usuarios.xml/LOGIN_O_NIF
+
 http://SERVIDOR:PUERTO/ldap/rest/dac/usuarios.dsml/LOGIN_O_NIF
+
 http://SERVIDOR:PUERTO/ldap/rest/dac/usuarios.ldif/LOGIN_O_NIF
 
 ----------

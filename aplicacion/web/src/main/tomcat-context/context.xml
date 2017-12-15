@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/ldap">
+
+   <Parameter name="daoLdapClass" 
+	      value="es.carm.openldap.dao.ldap.ObjectFactoryImpl" />
+
+   <Parameter name="daoLdapConfig"
+              value="${catalina.base}/conf/ldap/config-dac.ldap.properties" />
+
+   <Parameter name="log4j2"
+              value="${catalina.base}/conf/ldap/log4j2.xml" />
+
+</Context>

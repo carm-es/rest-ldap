@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://openldap.carm.es/dac.xsd" targetNamespace="http://openldap.carm.es/dac.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="func" final="restriction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="N"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="UsuarioDAC">
+		<xs:annotation>
+			<xs:documentation>Cuenta de usuario en el DAC (directorio aplicaciones corporativas)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="logincarm" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="nombre" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+				<xs:element name="apellido1" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="apellido2" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="apellidos" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="correo" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="telefono" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="esFuncionario" type="func" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="dni" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="dn" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>es.carm.ldap.openldap</groupId>
+    <artifactId>dac</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <artifactId>web</artifactId>
+  <packaging>war</packaging>
+
+   <dependencies>
+
+     <dependency> 
+       <groupId>es.carm.ldap.openldap</groupId>
+       <artifactId>modelo-dac</artifactId>
+       <version>${project.version}</version>
+     </dependency>
+     <dependency>
+       <groupId>es.carm.ldap.openldap</groupId>
+       <artifactId>daoimpl-ldap</artifactId>
+       <version>${project.version}</version>
+     </dependency>
+     <dependency>
+       <groupId>es.carm.ldap.openldap</groupId>
+       <artifactId>dac-rest</artifactId>
+       <version>${project.version}</version>
+     </dependency>
+
+     <!-- Servicios restful -->
+     <dependency>
+        <groupId>com.sun.xml.bind</groupId>
+        <artifactId>jaxb-core</artifactId>
+        <version>2.3.0</version>
+     </dependency>
+
+     <!-- Para poder compilar -->
+     <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>javax.servlet-api</artifactId>
+    	<version>3.1.0</version>
+    	<scope>provided</scope>
+     </dependency>
+
+     <!-- Para los LOGS de la aplicacion -->
+     <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.8.2</version>
+     </dependency>
+     <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.8.2</version>
+     </dependency>
+     <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-1.2-api</artifactId>
+        <version>2.8.2</version>
+     </dependency>
+
+   </dependencies>
+
+
+  <build>
+    <plugins>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-war-plugin</artifactId>
+         <version>2.2</version>
+         <configuration>
+                <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                        <classpathPrefix>lib/</classpathPrefix>
+                    </manifest>
+                </archive>
+                <webResources>
+                    <resource>
+                        <directory>${project.basedir}/src/main/tomcat-context</directory>
+                        <targetPath>META-INF</targetPath>
+                    </resource>
+                </webResources>
+                <warName>ldap</warName>
+         </configuration>
+      </plugin>
+    </plugins>
+<!--
+-->
+  </build>
+</project>

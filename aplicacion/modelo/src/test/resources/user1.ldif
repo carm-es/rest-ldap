@@ -1,0 +1,58 @@
+
+# extended LDIF
+#
+# LDAPv3
+# base <ou=usuariosCARM,dc=CARM,dc=ES> with scope subtree
+# filter: (uid=ibm78m)
+# requesting: ALL
+#
+
+# ibm78m, usuariosCARM, CARM.ES
+dn: uid=ibm78m,ou=usuariosCARM,dc=CARM,dc=ES
+displayName: BARRANCOS MARTINEZ IGNACIO
+givenName: IGNACIO
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: CARMfuncionario
+carmAPELLIDO2: MARTINEZ
+uid: ibm78m
+carmAPELLIDO1: BARRANCOS
+mail: ignacio.barrancos@carm.es
+cn: ibm78m
+DNI: 34823178M
+gecos: BARRANCOS MARTINEZ IGNACIO
+description: Cuenta de acceso para ibm78m
+homeDirectory: /home/ibm78m
+sn: BARRANCOS MARTINEZ
+loginShell: /bin/bash
+gidNumber: 100
+uidNumber: 113119
+carmActivo: A
+carmCodPuesto: PG00066
+carmResponsableOrg: N
+Localidad: MURCIA
+carmFuncionario: S
+Edificio: EDIFICIO ADMINISTRATIVO INFANTE
+telephoneNumber: 986357898
+roomNumber: P4 - 437
+CodigoPostal: 30011
+st: 11
+carmNOrgCompleta: 1;94;116;2622;1467;2777
+carmN1AdOrgtxt: COMUNIDAD AUTONOMA DE MURCIA
+carmN4AdOrgtxt: CENTRO REGIONAL DE INFORMATICA
+carmN5AdOrgtxt: SERVICIO INTEGRACION APLICACIONES CORPORATIVAS
+carmDenPuesto: ANALISTA DE APLICACIONES
+carmN2AdOrgtxt: CONSEJERIA HACIENDA Y ADMINISTRACIONES PUBLICAS
+carmOrgCompleta: COMUNIDAD AUTONOMA DE MURCIA;CONSEJERIA HACIENDA Y ADMINISTRA
+ CIONES PUBLICAS;DIRECCION GENERAL INFORMATICA, PATRIMONIO Y TELECOM.;CENTRO R
+ EGIONAL DE INFORMATICA;SERVICIO INTEGRACION APLICACIONES CORPORATIVAS;ESTRUC.
+ PROV. (HORAGES) DE PLATAFORMAS
+carmN3AdOrgtxt: DIRECCION GENERAL INFORMATICA, PATRIMONIO Y TELECOM.
+userPassword:: e0NSWVBUfSQ1JFVFV3hsSmRUJHhKY3E2MFlRY21BWS91NGJ2N1VUU1haNDZCV1Q
+ 1VEgzdmFIeS56ejF5NTY=
+
+

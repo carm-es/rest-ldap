@@ -4,13 +4,13 @@ import java.io.File;
 
 public interface Factory<T> {
 
-    public T fromString(String data);
+  public T fromString(String data);
 
-    public T fromFile(File file);
+  public T fromFile(File file);
 
-    public T fromFile(String pathFile);
+  public T fromFile(String pathFile);
 
-    public T fromURL(String urlFile);
+  public T fromURL(String urlFile);
 
-    public String toString(T object);
+  public String toString(T object);
 }

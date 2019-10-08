@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>es.carm.ldap.openldap</groupId>
+	<artifactId>dac-all</artifactId>
+	<version>1.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+        <name>dac-all</name>
+
+	<description>Aplicación Web para la consulta de usuarios en OpenLDAP a través de un servicio REST</description>
+
+	<scm>
+		<url>https://github.com/carm-es/rest-ldap</url>
+		<connection>scm:git:https://github.com/carm-es/rest-ldap.git</connection>
+		<developerConnection>scm:git:https://github.com/carm-es/rest-ldap.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+        <issueManagement>
+          <url>https://github.com/carm-es/rest-ldap/issues</url>
+          <system>GitHub</system>
+        </issueManagement>
+
+	<properties>
+           <source.encoding>utf-8</source.encoding>
+        </properties>	
+
+	<modules>
+		<module>aplicacion</module>
+	</modules>
+
+	<build>
+		<pluginManagement>
+		  <plugins>
+		    <plugin>
+		      <artifactId>maven-compiler-plugin</artifactId>
+		      <version>3.1</version>
+		      <configuration>
+			<!-- compilerArgs>
+				<arg>-Xlint:unchecked</arg>
+			</compilerArgs -->
+		        <encoding>${source.encoding}</encoding>
+		        <source>${java.version}</source>
+		        <target>${java.version}</target>
+		      </configuration>
+		    </plugin>
+		    <plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>cobertura-maven-plugin</artifactId>
+		        <configuration>
+		          <formats>
+		            <format>html</format>
+		            <format>xml</format>
+		          </formats>
+		        </configuration>
+		    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-release-plugin</artifactId>
+                        <version>2.5.3</version>
+                        <configuration>
+                                <tagNameFormat>v@{project.version}</tagNameFormat>
+                        </configuration>
+                    </plugin>
+		    <!-- Formateo de código fuente -->	      
+                    <plugin>
+                      <groupId>net.revelc.code.formatter</groupId>
+                      <artifactId>formatter-maven-plugin</artifactId>
+                      <version>2.8.1</version>
+                      <configuration>
+                         <configFile>${maven.multiModuleProjectDirectory}/.mvn/eclipse-java-google-style.xml</configFile>
+                         <encoding>${source.encoding}</encoding>
+                         <lineEnding>AUTO</lineEnding>
+                         <directories>
+                            <directory>${basedir}/src/main/java</directory>
+                            <directory>${basedir}/src/main/resources</directory>
+                            <directory>${basedir}/src/test/java</directory>
+                            <directory>${basedir}/src/test/resources</directory>
+                         </directories>
+                         <excludes>
+                            <exclude>**/*.html</exclude>
+                            <exclude>**/*.*css</exclude> 
+                            <exclude>**/*.wsdl</exclude> 
+                            <exclude>**/*.xml</exclude> 
+                            <exclude>**/*.xsd</exclude> 
+                         </excludes>
+                      </configuration>
+                    </plugin>
+                    <!-- Añadir git-hook en el precomit para formatear automáticamente el código fuente -->
+                    <plugin>
+                      <groupId>io.github.phillipuniverse</groupId>
+                      <artifactId>githook-maven-plugin</artifactId>
+                      <version>1.0.4</version>
+                      <configuration>
+                         <hooks>
+                            <pre-commit>mvn net.revelc.code.formatter:formatter-maven-plugin:format</pre-commit>
+                         </hooks>
+                      </configuration>
+                    </plugin>
+		  </plugins>
+	    </pluginManagement>
+            <plugins>
+              <!-- Por defecto, que formatee el código fuente -->	    
+              <plugin>
+                 <groupId>net.revelc.code.formatter</groupId>
+                 <artifactId>formatter-maven-plugin</artifactId>
+                 <executions>
+                    <execution>
+                      <goals>
+                         <goal>format</goal>
+                      </goals>
+                    </execution>
+                 </executions>
+              </plugin>
+              <!-- Por defecto, instalar los hooks de git en el cliente, cuando se invoque a maven -->
+              <plugin>
+                 <groupId>io.github.phillipuniverse</groupId>
+                 <artifactId>githook-maven-plugin</artifactId>
+                 <executions>
+                    <execution>
+                       <goals>
+                          <goal>install</goal>
+                       </goals>
+                    </execution>
+                 </executions>
+              </plugin>
+            </plugins>	  
+	</build>
+</project>

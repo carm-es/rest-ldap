@@ -60,15 +60,6 @@
   <build>
     <finalName>${project.artifactId}-${project.version}</finalName>
     <plugins>
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.7.0</version>
-            <configuration>
-               <source>${jdk.version}</source>
-               <target>${jdk.version}</target>
-            </configuration>
-         </plugin>
          <!-- Configuracion para que no se ejecuten los tests -->
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>

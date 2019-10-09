@@ -18,3 +18,10 @@ El proyecto está organizado en los siguientes directorios:
  - ```configuración/```, ficheros de configuración de la aplicación comentados 
  - ```docker/```, contenedor de prueba de la aplicación.
 
+
+
+
+
+
+
+

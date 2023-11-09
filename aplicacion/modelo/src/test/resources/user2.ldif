@@ -1,0 +1,43 @@
+
+# fso79w, usuariosCARM, CARM.ES
+dn: uid=fso79w,ou=usuariosCARM,dc=CARM,dc=ES
+givenName: FRANCISCA
+sn: SANCHEZ ODONELL
+loginShell: /bin/bash
+gidNumber: 100
+uidNumber: 130617
+displayName: SANCHEZ ODONELL FRANCISCA
+mail: francisca.sanchez834@carm.es
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: CARMfuncionario
+uid: fso79w
+gecos: SANCHEZ ODONELL FRANCISCA
+carmAPELLIDO2: ODONELL
+carmAPELLIDO1: SANCHEZ
+cn: fso79w
+homeDirectory: /home/fso79w
+description: Cuenta de acceso para fso79w
+DNI: X1396379W
+Localidad: MURCIA
+Edificio: EDIFICIO ADMINISTRATIVO INFANTE
+carmOrgCompleta: COMUNIDAD AUTONOMA DE MURCIA;CONSEJERIA HACIENDA Y ADMINISTRA
+ CIONES PUBLICAS;DIRECCION GENERAL FUNCION PUBLICA Y CALIDAD DE LOS SERVIC.;ES
+ CUELA DE FORMACION E INNOVACION DE LA CARM
+carmActivo: A
+carmN1AdOrgtxt: COMUNIDAD AUTONOMA DE MURCIA
+carmResponsableOrg: N
+carmN3AdOrgtxt: DIRECCION GENERAL FUNCION PUBLICA Y CALIDAD DE LOS SERVIC.
+carmDenPuesto: SOLICITANTE DE OA DE CURSOS DE LA EFIAP EN 2015
+carmFuncionario: N
+CodigoPostal: 30011
+carmN4AdOrgtxt: ESCUELA DE FORMACION E INNOVACION DE LA CARM
+carmNOrgCompleta: 1;94;18;81
+st: 11
+carmN2AdOrgtxt: CONSEJERIA HACIENDA Y ADMINISTRACIONES PUBLICAS
+userPassword:: e1NTSEF9UVJBR0g2UlJIST09
+

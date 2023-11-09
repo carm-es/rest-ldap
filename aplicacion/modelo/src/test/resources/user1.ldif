@@ -1,0 +1,58 @@
+
+# extended LDIF
+#
+# LDAPv3
+# base <ou=usuariosCARM,dc=CARM,dc=ES> with scope subtree
+# filter: (uid=cra52f)
+# requesting: ALL
+#
+
+# cra52f, usuariosCARM, CARM.ES
+dn: uid=cra52f,ou=usuariosCARM,dc=CARM,dc=ES
+displayName: RAMIREZ AGUIRRE CLAUDIO
+givenName: CLAUDIO
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: CARMfuncionario
+carmAPELLIDO2: AGUIRRE
+carmAPELLIDO1: RAMIREZ
+mail: ignacio.barrancos@carm.es
+uid: cra52f
+cn: cra52f
+DNI: 37230552F
+gecos: RAMIREZ AGUIRRE CLAUDIO
+description: Cuenta de acceso para cra52f
+homeDirectory: /home/cra52f
+sn: RAMIREZ AGUIRRE
+loginShell: /bin/bash
+gidNumber: 100
+uidNumber: 113119
+carmActivo: A
+carmCodPuesto: PX00066
+carmResponsableOrg: N
+Localidad: MURCIA
+carmFuncionario: S
+Edificio: EDIFICIO ADMINISTRATIVO INFANTE
+telephoneNumber: 986873422
+roomNumber: P4 - 437
+CodigoPostal: 30011
+st: 11
+carmNOrgCompleta: 1;94;116;2622;1467;2777
+carmN1AdOrgtxt: COMUNIDAD AUTONOMA DE MURCIA
+carmN4AdOrgtxt: CENTRO REGIONAL DE INFORMATICA
+carmN5AdOrgtxt: SERVICIO INTEGRACION APLICACIONES CORPORATIVAS
+carmDenPuesto: ANALISTA DE APLICACIONES
+carmN2AdOrgtxt: CONSEJERIA HACIENDA Y ADMINISTRACIONES PUBLICAS
+carmOrgCompleta: COMUNIDAD AUTONOMA DE MURCIA;CONSEJERIA HACIENDA Y ADMINISTRA
+ CIONES PUBLICAS;DIRECCION GENERAL INFORMATICA, PATRIMONIO Y TELECOM.;CENTRO R
+ EGIONAL DE INFORMATICA;SERVICIO INTEGRACION APLICACIONES CORPORATIVAS;ESTRUC.
+ PROV. (HORAGES) DE PLATAFORMAS
+carmN3AdOrgtxt: DIRECCION GENERAL INFORMATICA, PATRIMONIO Y TELECOM.
+userPassword:: e0NSWVBUfSRYJFVFV3hsSjQzZFQkeEpjcTYwWVFjbUFZSXU0YnY3VVRTWFo0NkJ
+ XVDVUSDN2YUh5QHp6MXk1Ng==
+
+
